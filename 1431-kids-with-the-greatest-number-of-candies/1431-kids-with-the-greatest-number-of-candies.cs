@@ -3,7 +3,7 @@ public class Solution {
         bool[] result = new bool[candies.Length];
         var highest = 0;
         foreach (int kid in candies) highest = Math.Max(highest, kid);
-        for (int i = 0; i<result.Length; i++) if (candies[i]+extraCandies >= highest) result[i] = true; else result[i] = false;
+        for (int i = 0; i<result.Length; i++) result[i] = (candies[i]+extraCandies >= highest);
         return result;
     }
 }
